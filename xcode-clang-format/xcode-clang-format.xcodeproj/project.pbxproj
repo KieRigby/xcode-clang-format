@@ -14,6 +14,10 @@
 		CB8163A52745D02E007118FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8163A32745D02E007118FE /* Main.storyboard */; };
 		CB8163B12745D02E007118FE /* xcode_clang_formatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8163B02745D02E007118FE /* xcode_clang_formatTests.swift */; };
 		CB8163BC2745D02E007118FE /* xcode_clang_formatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8163BB2745D02E007118FE /* xcode_clang_formatUITests.swift */; };
+		CB8163D02745D0E7007118FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8163CF2745D0E7007118FE /* Cocoa.framework */; };
+		CB8163D32745D0E7007118FE /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8163D22745D0E7007118FE /* SourceEditorExtension.swift */; };
+		CB8163D52745D0E7007118FE /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8163D42745D0E7007118FE /* SourceEditorCommand.swift */; };
+		CB8163DA2745D0E7007118FE /* xcode-clang-format-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CB8163CD2745D0E7007118FE /* xcode-clang-format-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +35,28 @@
 			remoteGlobalIDString = CB8163962745D02C007118FE;
 			remoteInfo = "xcode-clang-format";
 		};
+		CB8163D82745D0E7007118FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB81638F2745D02C007118FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB8163CC2745D0E7007118FE;
+			remoteInfo = "xcode-clang-format-extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB8163DE2745D0E7007118FE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CB8163DA2745D0E7007118FE /* xcode-clang-format-extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB8163972745D02C007118FE /* xcode-clang-format.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcode-clang-format.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +73,12 @@
 		CB8163B72745D02E007118FE /* xcode-clang-formatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xcode-clang-formatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8163BB2745D02E007118FE /* xcode_clang_formatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xcode_clang_formatUITests.swift; sourceTree = "<group>"; };
 		CB8163BD2745D02E007118FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB8163CD2745D0E7007118FE /* xcode-clang-format-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "xcode-clang-format-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB8163CF2745D0E7007118FE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CB8163D22745D0E7007118FE /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		CB8163D42745D0E7007118FE /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		CB8163D62745D0E7007118FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB8163D72745D0E7007118FE /* xcode_clang_format_extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = xcode_clang_format_extension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +103,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB8163CA2745D0E7007118FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB8163D02745D0E7007118FE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +120,8 @@
 				CB8163992745D02C007118FE /* xcode-clang-format */,
 				CB8163AF2745D02E007118FE /* xcode-clang-formatTests */,
 				CB8163BA2745D02E007118FE /* xcode-clang-formatUITests */,
+				CB8163D12745D0E7007118FE /* xcode-clang-format-extension */,
+				CB8163CE2745D0E7007118FE /* Frameworks */,
 				CB8163982745D02C007118FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +132,7 @@
 				CB8163972745D02C007118FE /* xcode-clang-format.app */,
 				CB8163AC2745D02E007118FE /* xcode-clang-formatTests.xctest */,
 				CB8163B72745D02E007118FE /* xcode-clang-formatUITests.xctest */,
+				CB8163CD2745D0E7007118FE /* xcode-clang-format-extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +177,25 @@
 			path = "xcode-clang-formatUITests";
 			sourceTree = "<group>";
 		};
+		CB8163CE2745D0E7007118FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB8163CF2745D0E7007118FE /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB8163D12745D0E7007118FE /* xcode-clang-format-extension */ = {
+			isa = PBXGroup;
+			children = (
+				CB8163D22745D0E7007118FE /* SourceEditorExtension.swift */,
+				CB8163D42745D0E7007118FE /* SourceEditorCommand.swift */,
+				CB8163D62745D0E7007118FE /* Info.plist */,
+				CB8163D72745D0E7007118FE /* xcode_clang_format_extension.entitlements */,
+			);
+			path = "xcode-clang-format-extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,10 +206,12 @@
 				CB8163932745D02C007118FE /* Sources */,
 				CB8163942745D02C007118FE /* Frameworks */,
 				CB8163952745D02C007118FE /* Resources */,
+				CB8163DE2745D0E7007118FE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CB8163D92745D0E7007118FE /* PBXTargetDependency */,
 			);
 			name = "xcode-clang-format";
 			productName = "xcode-clang-format";
@@ -191,6 +254,23 @@
 			productReference = CB8163B72745D02E007118FE /* xcode-clang-formatUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CB8163CC2745D0E7007118FE /* xcode-clang-format-extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB8163DB2745D0E7007118FE /* Build configuration list for PBXNativeTarget "xcode-clang-format-extension" */;
+			buildPhases = (
+				CB8163C92745D0E7007118FE /* Sources */,
+				CB8163CA2745D0E7007118FE /* Frameworks */,
+				CB8163CB2745D0E7007118FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xcode-clang-format-extension";
+			productName = "xcode-clang-format-extension";
+			productReference = CB8163CD2745D0E7007118FE /* xcode-clang-format-extension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +292,9 @@
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = CB8163962745D02C007118FE;
 					};
+					CB8163CC2745D0E7007118FE = {
+						CreatedOnToolsVersion = 11.6;
+					};
 				};
 			};
 			buildConfigurationList = CB8163922745D02C007118FE /* Build configuration list for PBXProject "xcode-clang-format" */;
@@ -230,6 +313,7 @@
 				CB8163962745D02C007118FE /* xcode-clang-format */,
 				CB8163AB2745D02E007118FE /* xcode-clang-formatTests */,
 				CB8163B62745D02E007118FE /* xcode-clang-formatUITests */,
+				CB8163CC2745D0E7007118FE /* xcode-clang-format-extension */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +337,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CB8163B52745D02E007118FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB8163CB2745D0E7007118FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,6 +378,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB8163C92745D0E7007118FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB8163D32745D0E7007118FE /* SourceEditorExtension.swift in Sources */,
+				CB8163D52745D0E7007118FE /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -299,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = CB8163962745D02C007118FE /* xcode-clang-format */;
 			targetProxy = CB8163B82745D02E007118FE /* PBXContainerItemProxy */;
+		};
+		CB8163D92745D0E7007118FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB8163CC2745D0E7007118FE /* xcode-clang-format-extension */;
+			targetProxy = CB8163D82745D0E7007118FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -430,6 +535,7 @@
 		CB8163C12745D02E007118FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "xcode-clang-format/xcode_clang_format.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +559,7 @@
 		CB8163C22745D02E007118FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "xcode-clang-format/xcode_clang_format.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -557,6 +664,48 @@
 			};
 			name = Release;
 		};
+		CB8163DC2745D0E7007118FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "xcode-clang-format-extension/xcode_clang_format_extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HS55W87WAA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "xcode-clang-format-extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kierigby.xcode-clang-format.xcode-clang-format-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CB8163DD2745D0E7007118FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "xcode-clang-format-extension/xcode_clang_format_extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HS55W87WAA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "xcode-clang-format-extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kierigby.xcode-clang-format.xcode-clang-format-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -592,6 +741,15 @@
 			buildConfigurations = (
 				CB8163C72745D02E007118FE /* Debug */,
 				CB8163C82745D02E007118FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB8163DB2745D0E7007118FE /* Build configuration list for PBXNativeTarget "xcode-clang-format-extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8163DC2745D0E7007118FE /* Debug */,
+				CB8163DD2745D0E7007118FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
